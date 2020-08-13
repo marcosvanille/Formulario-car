@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troca de Óleo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="oleo.css">
+</head>
+<body class="bg">
+<div class="container">
+
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputNome" class="lb">Nome </label>
+                <input type="text" class="form-control" id="inputNome" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputSobrenome" class="lb">Sobrenome</label>
+                <input type="text" class="form-control" id="inputSobrenome" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4" class="lb">E-mail</label>
+                <input type="email" class="form-control" id="inputEmail4" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputFone" class="lb">Telefone</label>
+                <input type="number" class="form-control" id="inputFone" placeholder="Telefone" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress" class="lb">Endereço</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="">
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCidade" class="lb">Cidade</label>
+                <input type="text" class="form-control" id="inputCidade">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="inputEstado" class="lb">Estado</label>
+                <select id="inputEstado" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+        </div>
+<!--loja-->
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputMarca" class="lb">Marca</label>
+                <select id="inputMarca" class="form-control">
+                    <option id="A">Volkswagen</option>
+                    <option id="B">FIAT</option>
+                    <option id="C">Chevrolet</option>
+                    <option id="D">Ford</option>
+
+
+
+                </select>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="inputCarro" class="lb">Carros</label>
+                <select id="inputCarro" class="form-control">
+                    <option selected>Modelos</option>
+                    <option id="up">UP</option>
+                    <option id="gol">Gol</option>
+                    <option id="uno">Uno</option>
+                    <option id="palio">Palio</option>
+                    <option id="celta">Celta</option>
+                    <option id="corsa">Corsa</option>
+                    <option id="ka">Ka</option>
+                    <option id="value">Fiesta</option>
+
+                </select>
+            </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+</div>
+
+<script src="troca-de-oleo.js"></script>
+</body>
+</html>
