@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="oleo.css">
+
 </head>
 <body class="bg">
 <div class="container">
 
     <form>
+        <h1 id="titulo">Formulario de Cadastro</h1>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputNome" class="lb">Nome </label>
@@ -28,40 +30,37 @@
             </div>
             <div class="form-group col-md-3">
                 <label for="inputFone" class="lb">Telefone</label>
-                <input type="number" class="form-control" id="inputFone" placeholder="Telefone" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$" required>
+                <input type="text" class="form-control" id="inputFone" placeholder="Telefone" required>
             </div>
         </div>
-        <div class="form-group">
-            <label for="inputAddress" class="lb">Endereço</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="">
-        </div>
-
         <div class="form-row">
             <div class="form-group col-md-6">
+                <label for="inputAddress" class="lb">Endereço</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="">
+            </div>
+            <div class="form-group col-md-4">
                 <label for="inputCidade" class="lb">Cidade</label>
                 <input type="text" class="form-control" id="inputCidade">
             </div>
+        </div>
 
-            <div class="form-group col-md-4">
-                <label for="inputEstado" class="lb">Estado</label>
-                <select id="inputEstado" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
+        <!--loja-->
+        <div class="form-row  ">
+            <div class="form-group col-md-3">
+                <label for="inputMarca" class="lb">Tipo</label>
+                <select id="inputMarca" class="form-control">
+                    <option id="B">Comum</option>
+                    <option class="A">Esportivo</option>
+                    <option id="C">Confortavel</option>
                 </select>
             </div>
-        </div>
-<!--loja-->
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="inputMarca" class="lb">Marca</label>
-                <select id="inputMarca" class="form-control">
-                    <option id="A">Volkswagen</option>
-                    <option id="B">FIAT</option>
-                    <option id="C">Chevrolet</option>
-                    <option id="D">Ford</option>
 
-
-
+            <div class="form-group col-md-3">
+                <label for="inputCavalaria" class="lb">Cavalaria</label>
+                <select id="inputCavalaria" class="form-control">
+                    <option id="Cv1">75 cv</option>
+                    <option id="Cv2">200 cv</option>
+                    <option id="Cv3">500 cv</option>
                 </select>
             </div>
 
@@ -73,11 +72,10 @@
                     <option id="gol">Gol</option>
                     <option id="uno">Uno</option>
                     <option id="palio">Palio</option>
-                    <option id="celta">Celta</option>
-                    <option id="corsa">Corsa</option>
-                    <option id="ka">Ka</option>
-                    <option id="value">Fiesta</option>
-
+                    <option id="celta">458 italia</option>
+                    <option id="corsa">Mercedes 245</option>
+                    <option id="ka">golf gti</option>
+                    <option id="value">Bmw 325i</option>
                 </select>
             </div>
 
@@ -87,7 +85,10 @@
     </form>
 
 </div>
-
+<script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
 <script src="troca-de-oleo.js"></script>
 </body>
 </html>
