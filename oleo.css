@@ -1,8 +1,9 @@
-body,html{
+body, html {
     height: 100%;
     margin: 0;
 }
-#titulo{
+
+#titulo {
     text-align: center;
     color: aliceblue;
     text-shadow: 1px 2px #000;
@@ -10,16 +11,17 @@ body,html{
 }
 
 
-.bg{
+.bg {
     background-image: url("img/ferrari.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-form{
+
+form {
     /*margin-top: 175px;*/
 }
 
-.lb{
+.lb {
     color: aliceblue;
     font-size: 20px;
     text-shadow: 1px 2px #000;
