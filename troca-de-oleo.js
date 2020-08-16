@@ -26,13 +26,14 @@ function cadastrar() {
 function tipoCar() {
     console.log(tipo.value)
     console.log(preco.value)
+    console.log(carros.value)
     if (tipo.value == 'A') { //A comum
         preco.value = "1"; // 20 a 30 mil
     }
-    if (tipo.value == 'B') { //B esportivo
+    if (tipo.value == 'B') { //B confortavel
         preco.value = "2" // 50 a 100 mil
     }
-    if (tipo.value == 'C') { //C confortavel
+    if (tipo.value == 'C') { //C  esportivo
         preco.value = '3'  // 200 a 500 mil
     }
 }
