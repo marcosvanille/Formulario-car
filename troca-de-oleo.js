@@ -29,6 +29,7 @@ function tipoCar() {
     console.log(carros.value)
     if (tipo.value == 'A') { //A comum
         preco.value = "1"; // 20 a 30 mil
+        carros.value = "up"
     }
     if (tipo.value == 'B') { //B confortavel
         preco.value = "2" // 50 a 100 mil
