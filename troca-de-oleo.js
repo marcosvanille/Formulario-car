@@ -26,32 +26,39 @@ function cadastrar() {
 function tipoCar() {
     console.log(tipo.value)
     console.log(preco.value)
-    console.log(carros.value)
+    // console.log(carros.value)
     if (tipo.value == 'A') { //A comum
-        preco.value = "1"; // 20 a 30 mil
-        carros.value = "up"
+        preco.value = "20 a 30 mil"; // 20 a 30 mil
+        preco.disabled = true
+
+        var opt0 = document.createElement("option");
+        opt0.value = "up";
+        opt0.text = "UP";
+        carros.add(opt0, carros.options[0]);
+
+        var opt1 = document.createElement("option");
+        opt1.value = "palio";
+        opt1.text = "Palio";
+        carros.add(opt1, carros.options[0]);
     }
     if (tipo.value == 'B') { //B confortavel
-        preco.value = "2" // 50 a 100 mil
+        preco.value = "50 a 100 mil" // 50 a 100 mil
+        preco.disabled = true
+
+
+        var value0 = document.createElement("option");
+        value0.value = "bmw";
+        value0.text = "Bmw";
+        carros.add(value0, carros.options[0]);
+
+
     }
     if (tipo.value == 'C') { //C  esportivo
-        preco.value = '3'  // 200 a 500 mil
+        preco.value = '200 a 500 mil '  // 200 a 500 mil
+        preco.disabled = true
+
     }
 }
-
-
-// function somenteNumeros(e) {
-//     var charCode = e.charCode ? e.charCode : e.keyCode;
-//     // charCode 8 = backspace
-//     // charCode 9 = tab
-//     if (charCode != 8 && charCode != 9) {
-//         // charCode 48 equivale a 0
-//         // charCode 57 equivale a 9
-//         if (charCode < 48 || charCode > 57) {
-//             return false;
-//         }
-//     }
-// }
 
 
 // // bb.onclick = function (){
