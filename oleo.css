@@ -26,3 +26,7 @@ form {
     font-size: 20px;
     text-shadow: 1px 2px #000;
 }
+#error-email{
+    color: red;
+    font-size: 20px;
+    text-shadow: 1px 2px #000;}

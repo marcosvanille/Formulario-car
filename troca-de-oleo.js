@@ -2,8 +2,9 @@ var tipo = document.getElementById('inputTipo')
 var preco = document.getElementById('inputPreco')
 var carros = document.getElementById('inputCarro')
 var nome = document.getElementById('inputNome')
-var email = document.getElementById('inputEmail')
-
+var telefone = document.getElementById('inputFone')
+var email = document.querySelector('#email');
+var error = document.querySelector('#error-email');
 
 function cadastrar() {
 
@@ -40,7 +41,10 @@ function tipoCar() {
         opt1.value = "palio";
         opt1.text = "Palio";
         carros.add(opt1, carros.options[0]);
+
+
     }
+
     if (tipo.value == 'B') { //B confortavel
         preco.value = "50 a 100 mil" // 50 a 100 mil
         preco.disabled = true
@@ -61,19 +65,47 @@ function tipoCar() {
 }
 
 
-// // bb.onclick = function (){
-// // console.log(cc);
-// // }
-// // $(function(){
-// //     $("#B").html("jquery aaa")
-// // });
-//
-// // $( "#inputTipo " ).click(function() {
-// //
-// // });
-//
-// $("#B").onclick(function (event){
-//     console.log(event.currentTarget);
-//     console.log(this);
-//
-// })
+function validarEmail() {
+    var email = document.querySelector('#email');
+    var error = document.querySelector('#error-email');
+
+    if (!email.checkValidity()) {
+        error.innerHTML = "Email invalido";
+    }
+
+}
+
+function redefinirMsg() {
+    var error = document.querySelector('#error-email');
+    if (error.innerHTML == "Email invalido") {
+        error.innerHTML = "";
+    }
+}
+
+
+function mascara(o, f) {
+    v_obj = o
+    v_fun = f
+    setTimeout("execmascara()", 1)
+}
+
+function execmascara() {
+    v_obj.value = v_fun(v_obj.value)
+}
+
+function mtel(v) {
+    v = v.replace(/\D/g, "");             //Remove tudo o que não é dígito
+    v = v.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v = v.replace(/(\d)(\d{4})$/, "$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+
+function id(el) {
+    return document.getElementById(el);
+}
+
+window.onload = function () {
+    id('inputFone').onkeyup = function () {
+        mascara(this, mtel);
+    }
+}

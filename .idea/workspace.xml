@@ -13,6 +13,7 @@
     <list default="true" id="da30f4a7-7507-4515-a4cf-2713514f6af1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oleo.css" beforeDir="false" afterPath="$PROJECT_DIR$/oleo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/troca-de-oleo.js" beforeDir="false" afterPath="$PROJECT_DIR$/troca-de-oleo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +81,7 @@
       <workItem from="1597284144539" duration="33766000" />
       <workItem from="1597460544155" duration="1069000" />
       <workItem from="1597461652627" duration="118000" />
-      <workItem from="1597543712891" duration="16450000" />
+      <workItem from="1597543712891" duration="30815000" />
     </task>
     <servers />
   </component>
@@ -109,6 +110,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="498" height="446" key="SwitcherDM/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1597281085341" />
+    <state x="519" y="145" width="944" height="823" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597873534663">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="519" y="145" width="944" height="823" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1597873534663" />
     <state x="2697" y="468" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597170128724">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
