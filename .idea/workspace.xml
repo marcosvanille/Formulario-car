@@ -13,7 +13,6 @@
     <list default="true" id="da30f4a7-7507-4515-a4cf-2713514f6af1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oleo.css" beforeDir="false" afterPath="$PROJECT_DIR$/oleo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/troca-de-oleo.js" beforeDir="false" afterPath="$PROJECT_DIR$/troca-de-oleo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +80,7 @@
       <workItem from="1597284144539" duration="33766000" />
       <workItem from="1597460544155" duration="1069000" />
       <workItem from="1597461652627" duration="118000" />
-      <workItem from="1597543712891" duration="30815000" />
+      <workItem from="1597543712891" duration="40296000" />
     </task>
     <servers />
   </component>

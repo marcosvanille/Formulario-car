@@ -18,6 +18,9 @@ function cadastrar() {
 
         return
     }
+    if (telefone.value == "") {
+        alert('preencha o campo de telefone')
+    }
 
     alert('Cadastrado com sucesso!!')
 
@@ -25,49 +28,73 @@ function cadastrar() {
 }
 
 function tipoCar() {
-    console.log(tipo.value)
-    console.log(preco.value)
-    // console.log(carros.value)
     if (tipo.value == 'A') { //A comum
         preco.value = "20 a 30 mil"; // 20 a 30 mil
         preco.disabled = true
 
-        var opt0 = document.createElement("option");
-        opt0.value = "up";
-        opt0.text = "UP";
-        carros.add(opt0, carros.options[0]);
+        limpaResetCarros()
 
-        var opt1 = document.createElement("option");
-        opt1.value = "palio";
-        opt1.text = "Palio";
-        carros.add(opt1, carros.options[0]);
+        var comum0 = document.createElement("option");
+        comum0.value = "up";
+        comum0.text = "UP";
+        carros.add(comum0, carros.options[0]);
 
+        var comum1 = document.createElement("option");
+        comum1.value = "palio";
+        comum1.text = "Palio";
+        carros.add(comum1, carros.options[0]);
 
+        return
     }
 
     if (tipo.value == 'B') { //B confortavel
         preco.value = "50 a 100 mil" // 50 a 100 mil
         preco.disabled = true
 
+        limpaResetCarros()
 
-        var value0 = document.createElement("option");
-        value0.value = "bmw";
-        value0.text = "Bmw";
-        carros.add(value0, carros.options[0]);
+        var confortavel0 = document.createElement("option");
+        confortavel0.value = "bmw";
+        confortavel0.text = "Bmw";
+        carros.add(confortavel0, carros.options[0]);
 
+        var confortavel01 = document.createElement("option");
+        confortavel01.value = "mercedes";
+        confortavel01.text = "Mercedes";
+        carros.add(confortavel01, carros.options[0]);
 
     }
     if (tipo.value == 'C') { //C  esportivo
         preco.value = '200 a 500 mil '  // 200 a 500 mil
         preco.disabled = true
 
+        limpaResetCarros()
+
+        var esportivo0 = document.createElement("option");
+        esportivo0.value = "ferrari";
+        esportivo0.text = "Ferrari";
+        carros.add(esportivo0, carros.options[0]);
+
+
+        var esportivo01 = document.createElement("option");
+        esportivo01.value = "bugati";
+        esportivo01.text = "Bugati";
+        carros.add(esportivo01, carros.options[0]);
     }
 }
 
+function limpaResetCarros() {
 
+    while (carros.length) {
+        carros.remove(0);
+    }
+
+
+}
+
+//Validaçao do E-mail
 function validarEmail() {
-    var email = document.querySelector('#email');
-    var error = document.querySelector('#error-email');
+
 
     if (!email.checkValidity()) {
         error.innerHTML = "Email invalido";
@@ -83,6 +110,7 @@ function redefinirMsg() {
 }
 
 
+//mascara no telefone
 function mascara(o, f) {
     v_obj = o
     v_fun = f
