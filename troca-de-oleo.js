@@ -44,6 +44,16 @@ function tipoCar() {
         comum1.text = "Palio";
         carros.add(comum1, carros.options[0]);
 
+        var comum2 = document.createElement("option");
+        comum2.value = "uno";
+        comum2.text = "Uno";
+        carros.add(comum2, carros.options[0]);
+
+        var comum3 = document.createElement("option");
+        comum3.value = "gol";
+        comum3.text = "Gol";
+        carros.add(comum3, carros.options[0]);
+
         return
     }
 
@@ -63,6 +73,11 @@ function tipoCar() {
         confortavel01.text = "Mercedes";
         carros.add(confortavel01, carros.options[0]);
 
+        var confortavel02 = document.createElement("option");
+        confortavel02.value = "fusion";
+        confortavel02.text = "Fusion";
+        carros.add(confortavel02, carros.options[0]);
+
     }
     if (tipo.value == 'C') { //C  esportivo
         preco.value = '200 a 500 mil '  // 200 a 500 mil
@@ -80,6 +95,13 @@ function tipoCar() {
         esportivo01.value = "bugati";
         esportivo01.text = "Bugati";
         carros.add(esportivo01, carros.options[0]);
+
+        var esportivo02 = document.createElement("option");
+        esportivo02.value = "lamborghini";
+        esportivo02.text = "Lamborghini";
+        carros.add(esportivo02, carros.options[0]);
+
+
     }
 }
 
