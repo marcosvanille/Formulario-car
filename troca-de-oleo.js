@@ -30,7 +30,7 @@ function cadastrar() {
 function tipoCar() {
     if (tipo.value == 'A') { //A comum
         preco.value = "20 a 30 mil"; // 20 a 30 mil
-        preco.disabled = true
+        preco.readOnly = true
 
         limpaResetCarros()
 
