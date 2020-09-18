@@ -59,7 +59,7 @@ function tipoCar() {
 
     if (tipo.value == 'B') { //B confortavel
         preco.value = "50 a 100 mil" // 50 a 100 mil
-        preco.disabled = true
+        preco.readOnly = true
 
         limpaResetCarros()
 
@@ -81,7 +81,7 @@ function tipoCar() {
     }
     if (tipo.value == 'C') { //C  esportivo
         preco.value = '200 a 500 mil '  // 200 a 500 mil
-        preco.disabled = true
+        preco.readOnly = true
 
         limpaResetCarros()
 
