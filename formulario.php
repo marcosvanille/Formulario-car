@@ -9,6 +9,12 @@ $nome = $_POST;
 //exit();
 $nome = $_POST['nome'];
 $email = $_POST['email'];
+$telefone = $_POST['telefone'];
+$endereco = $_POST['endereco'];
+$cidade = $_POST['cidade'];
+$tipo = $_POST['tipo'];
+$preco = $_POST['preço'];
+$carros = $_POST['carros'];
 //echo json_encode($nome);
 
 
@@ -25,7 +31,7 @@ if (!$conn) {
 echo "Connected successfully";
 
 $sql = "INSERT INTO formulario (nome, email, telefone,endereco,cidade,tipo,preco,carros)
-VALUES ('$nome', '$email', '965545214','quadra 25','paranoa','comum','20 mil','gol')";
+VALUES ('$nome', '$email', '$telefone','$endereco','$cidade','$tipo','$preco','$carros')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
