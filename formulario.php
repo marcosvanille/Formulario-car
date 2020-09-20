@@ -6,6 +6,7 @@ header('Content-Type: application/json');
 $nome = [];
 $nome = $_POST;
 //var_dump($_POST);
+//echo json_encode($nome);
 //exit();
 $nome = $_POST['nome'];
 $email = $_POST['email'];
@@ -15,7 +16,6 @@ $cidade = $_POST['cidade'];
 $tipo = $_POST['tipo'];
 $preco = $_POST['preço'];
 $carros = $_POST['carros'];
-//echo json_encode($nome);
 
 
 $servername = "localhost";
@@ -28,7 +28,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully";
+echo "Conectado com Sucesso!!";
 
 $sql = "INSERT INTO formulario (nome, email, telefone,endereco,cidade,tipo,preco,carros)
 VALUES ('$nome', '$email', '$telefone','$endereco','$cidade','$tipo','$preco','$carros')";
