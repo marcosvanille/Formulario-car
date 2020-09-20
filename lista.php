@@ -1,3 +1,9 @@
+<?php include("conecta.php");
+
+$resultado = mysqli_query($conexao, "select * from formulario");
+$formulario = mysqli_fetch_assoc($resultado);
+echo $formulario['nome'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
