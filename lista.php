@@ -54,7 +54,7 @@ include("funçoes-formulario.php"); ?>
                 <td><?= $dado['carros'] ?></td>
                 <td>
                     <form action="remove-dados.php" method="post">
-                        <input type="hidden" name="id" value="<?=$dado['id']?>">
+                        <input type="hidden" name="id" value="<?= $dado['id'] ?>">
                         <button type="btn" class="btn btn-danger">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill"
                                  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -63,17 +63,16 @@ include("funçoes-formulario.php"); ?>
                             </svg>
                         </button>
                     </form>
-
-
-
                 </td>
             </tr>
 
         <?php
         endforeach
         ?>
+
         </tbody>
     </table>
+    <a href="index.html" class="btn btn-info">voltar</a>
 </div>
 </body>
 </html>

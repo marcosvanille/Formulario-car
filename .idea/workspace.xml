@@ -11,10 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da30f4a7-7507-4515-a4cf-2713514f6af1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/remove-dados.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funçoes-formulario.php" beforeDir="false" afterPath="$PROJECT_DIR$/funçoes-formulario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista.php" beforeDir="false" afterPath="$PROJECT_DIR$/lista.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +92,7 @@
       <workItem from="1600189023663" duration="1015000" />
       <workItem from="1600358104731" duration="4781000" />
       <workItem from="1600445441812" duration="511000" />
-      <workItem from="1600445957813" duration="43116000" />
+      <workItem from="1600445957813" duration="44407000" />
     </task>
     <servers />
   </component>
