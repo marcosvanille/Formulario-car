@@ -1,9 +1,7 @@
 <?php include("conecta.php");
+include("funçoes-formulario.php"); ?>
 
-$resultado = mysqli_query($conexao, "select * from formulario");
-$formulario = mysqli_fetch_assoc($resultado);
-echo $formulario['nome'];
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,66 +11,42 @@ echo $formulario['nome'];
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-<div class="container-fluid">
-    <table class="table">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>asdasd</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-        </tr>
-        </tbody>
-    </table>
+<div class="container-fluid" style="width: 1500px">
+    <table class="table table-striped">
 
-    <table class="table">
-        <thead class="thead-light">
+        <thead class="thead-dark"">
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Carros</th>
         </tr>
         </thead>
         <tbody>
+        <?php
+        $dados = listaProdutos($conexao);
+        foreach ($dados as $dado) :
+        ?>
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row"><?= $dado['id']?></th>
+            <td><?= $dado['nome']?></td>
+            <td><?= $dado['email']?></td>
+            <td><?= $dado['telefone']?></td>
+            <td><?= $dado['endereco']?></td>
+            <td><?= $dado['cidade']?></td>
+            <td><?= $dado['tipo']?></td>
+            <td><?= $dado['preco']?></td>
+            <td><?= $dado['carros']?></td>
         </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-        </tr>
+
+        <?php
+        endforeach
+        ?>
         </tbody>
     </table>
 </div>
