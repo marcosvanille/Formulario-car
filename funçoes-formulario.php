@@ -16,3 +16,10 @@ function insereProdutos($conexao, $nome, $email, $telefone, $endereco, $cidade, 
     VALUES ('$nome', '$email', '$telefone','$endereco','$cidade','$tipo','$preco','$carros')";
     return  $resultadoDaInsercao = mysqli_query($conexao, $query);
 }
+
+function removeDado($conexao,$id){
+    $query = "DELETE from formulario where id = {$id}";
+    return mysqli_query($conexao,$query);
+}
+
+
