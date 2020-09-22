@@ -36,6 +36,7 @@ include("funçoes-formulario.php"); ?>
             <th scope="col">Preço</th>
             <th scope="col">Carros</th>
             <th scope="col">Remover</th>
+            <th scope="col">Alterar Dados</th>
         </tr>
         </thead>
         <tbody>
@@ -64,7 +65,8 @@ include("funçoes-formulario.php"); ?>
                         </button>
                     </form>
                 </td>
-            </tr>
+                <td><a class="btn btn-primary" href="altera-dados.php?id=<?=$dado['id']?>">Alterar</a></td>
+            </tr>   
 
         <?php
         endforeach
