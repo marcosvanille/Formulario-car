@@ -1,8 +1,8 @@
 <?php include("conecta.php");
-include("funçoes-formulario.php");
+include("banco-formulario.php");
 
 $id = $_POST['id'];
-removeDado($conexao,$id);
+removeDados($conexao,$id);
 header("location: lista.php?removido=true");
 die();
 ?>

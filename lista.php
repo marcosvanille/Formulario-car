@@ -1,5 +1,5 @@
 <?php include("conecta.php");
-include("funçoes-formulario.php"); ?>
+include("banco-formulario.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,22 +9,17 @@ include("funçoes-formulario.php"); ?>
     <link rel="stylesheet" href="oleo.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-
 </head>
 <body>
 
-<div class="container-fluid" style="width: 1500px">
-
+<div class="container-fluid" style="width: 1500px; margin-top: 50px">
     <?php
     if (array_key_exists("removido", $_GET) && $_GET["removido"] == "true") { ?>
         <p class="alert-success">Dados Apagados com Sucesso.</p>
         <?php
     }
-
     ?>
     <table class="table">
-
         <thead class="thead-dark">
         <tr>
             <th scope="col">Nome</th>
@@ -41,7 +36,7 @@ include("funçoes-formulario.php"); ?>
         </thead>
         <tbody>
         <?php
-        $dados = listaProdutos($conexao);
+        $dados = listaDados($conexao);
         foreach ($dados as $dado) :
             ?>
             <tr>
@@ -65,13 +60,11 @@ include("funçoes-formulario.php"); ?>
                         </button>
                     </form>
                 </td>
-                <td><a class="btn btn-primary" href="altera-dados.php?id=<?=$dado['id']?>">Alterar</a></td>
-            </tr>   
-
+                <td><a class="btn btn-primary" href="altera-formulario.php?id=<?= $dado['id'] ?>">Alterar</a></td>
+            </tr>
         <?php
         endforeach
         ?>
-
         </tbody>
     </table>
     <a href="index.html" class="btn btn-info">voltar</a>

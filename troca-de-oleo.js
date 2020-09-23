@@ -28,6 +28,19 @@ function cadastrar() {
 }
 
 function tipoCar() {
+    $.ajax({
+        url: "http://localhost/projetos/Formulario-car/carro.php",
+        type: 'GET',
+        success: function (data) {
+            // alert('Cadastrado com sucesso!')
+            console.log(data);
+        },
+        error: function (data) {
+            alert('Erro ao chamar requisiçao')
+        }
+
+    });
+
     if (tipo.value == 'A') { //A comum
         preco.value = "20 a 30 mil"; // 20 a 30 mil
         preco.readOnly = true

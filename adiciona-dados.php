@@ -1,10 +1,7 @@
 <?php include("conecta.php");
- include("funçoes-formulario.php");
+include("banco-formulario.php");
 
 
-
-$nome = [];
-$nome = $_POST;
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
@@ -14,8 +11,8 @@ $tipo = $_POST['tipo'];
 $preco = $_POST['preço'];
 $carros = $_POST['carros'];
 
-if (insereProdutos($conexao, $nome, $email, $telefone, $endereco, $cidade, $tipo, $preco, $carros)) {
-    echo "Conectado com Sucesso!!";
+if (insereDados($conexao, $nome, $email, $telefone, $endereco, $cidade, $tipo, $preco, $carros)) {
+    echo "Cadastrado com Sucesso!!";
 } else {
     echo "Nao Cadastrado";
 }
