@@ -7,11 +7,13 @@ include("conecta.php");
 
 $query = "SELECT * from carros";
 
-$dados =[];
+$dados = [];
 $resultado = mysqli_query($conexao, $query);
 while ($dado = mysqli_fetch_assoc($resultado)) {
     array_push($dados, $dado);
 }
+
+
 echo json_encode($dados);
 
 
