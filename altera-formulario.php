@@ -56,9 +56,9 @@ $dados = buscaDados($conexao,$id);
                 <label for="inputTipo" class="lb">Tipo</label>
                 <select id="inputTipo" class="form-control" name="tipo" onclick="tipoCar()" value="<?=$dados['tipo']?>">
                     <option selected></option>
-                    <option name="comum" value="A">Comum</option>
-                    <option name="confortavel" value="B">Confortavel</option>
-                    <option name="esportivo" value="C">Esportivo</option>
+                    <option name="comum" value="comum">Comum</option>
+                    <option name="confortavel" value="confortavel">Confortavel</option>
+                    <option name="esportivo" value="esportivo">Esportivo</option>
                 </select>
             </div>
 

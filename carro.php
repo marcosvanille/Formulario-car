@@ -15,7 +15,9 @@ while ($dado = mysqli_fetch_assoc($resultado)) {
 
 
 echo json_encode($dados);
-
+foreach ($dados as $value){
+    echo $value['tipo'];
+}
 
 //var_dump($dados);
 

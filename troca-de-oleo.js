@@ -41,7 +41,7 @@ function tipoCar() {
 
     });
 
-    if (tipo.value == 'A') { //A comum
+    if (tipo.value == 'comum') { //A comum
         preco.value = "20 a 30 mil"; // 20 a 30 mil
         preco.readOnly = true
 
@@ -70,7 +70,7 @@ function tipoCar() {
         return
     }
 
-    if (tipo.value == 'B') { //B confortavel
+    if (tipo.value == 'confortavel') { //B confortavel
         preco.value = "50 a 100 mil" // 50 a 100 mil
         preco.readOnly = true
 
@@ -92,7 +92,7 @@ function tipoCar() {
         carros.add(confortavel02, carros.options[0]);
 
     }
-    if (tipo.value == 'C') { //C  esportivo
+    if (tipo.value == 'esportivo') { //C  esportivo
         preco.value = '200 a 500 mil '  // 200 a 500 mil
         preco.readOnly = true
 
