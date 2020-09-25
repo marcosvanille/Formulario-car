@@ -21,7 +21,7 @@ function alteraDados($conexao, $id, $nome, $email, $telefone, $endereco, $cidade
 {
     $query = "UPDATE formulario set nome = '{$nome}' ,email = '{$email}' , telefone = {$telefone}, 
 endereco = {'endereco'}, cidade = '{$cidade}', tipo = {$tipo}, preco = {$preco}, carros = {$carros} where id = {$id}";
-    return mysqli_query($conexao,$query);
+    return mysqli_query($conexao, $query);
 }
 
 function buscaDados($conexao, $id)
