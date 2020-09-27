@@ -37,4 +37,15 @@ function removeDados($conexao, $id)
     return mysqli_query($conexao, $query);
 }
 
+//function tipo ($conexao ,$id){
+//    $query = "SELECT * from carros";
+//    $dados = [];
+//    while ($dado = mysqli_fetch_assoc($resultado)) {
+//        array_push($dados, $dado);
+//    }
+//   return $resultado = mysqli_query($conexao, $query);
+//
+//
+//}
+
 

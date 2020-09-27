@@ -29,11 +29,11 @@ function cadastrar() {
 
 function tipoCar() {
     $.ajax({
-        url: "http://localhost/projetos/Formulario-car/carro.php",
+        url: "http://localhost/projetos/Formulario-car/tipos-carros.php/tipo=",
         type: 'GET',
         success: function (data) {
-            // alert('Cadastrado com sucesso!')
-            console.log(data);
+            tipos = data
+            createTipos(tipos);
         },
         error: function (data) {
             alert('Erro ao chamar requisiçao')
@@ -172,3 +172,35 @@ window.onload = function () {
         mascara(this, mtel);
     }
 }
+
+function createTipos(tipos) {
+    tipos.forEach(function (element, index, array) {
+
+        var optionElement = document.createElement("option");
+        optionElement.value = element.tipo;
+        optionElement.text = element.tipo;
+        tipo.add(optionElement, tipo.options[0]);
+
+        console.log(element);
+    })
+}
+
+var tipos = [];
+
+$.ajax({
+    url: "http://localhost/projetos/Formulario-car/carro.php",
+    type: 'GET',
+    success: function (data) {
+        tipos = data
+        createTipos(tipos);
+    },
+    error: function (data) {
+        alert('Erro ao chamar requisiçao')
+    }
+
+});
+
+
+
+
+
