@@ -11,12 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da30f4a7-7507-4515-a4cf-2713514f6af1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tipo-carros.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/altera-formulario.php" beforeDir="false" afterPath="$PROJECT_DIR$/altera-formulario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/banco-formulario.php" beforeDir="false" afterPath="$PROJECT_DIR$/banco-formulario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carro.php" beforeDir="false" afterPath="$PROJECT_DIR$/carro.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/troca-de-oleo.js" beforeDir="false" afterPath="$PROJECT_DIR$/troca-de-oleo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +97,9 @@
       <workItem from="1600996875353" duration="1491000" />
       <workItem from="1601008036091" duration="3693000" />
       <workItem from="1601043609957" duration="7276000" />
-      <workItem from="1601214392063" duration="628000" />
+      <workItem from="1601214392063" duration="1262000" />
+      <workItem from="1601329224845" duration="5987000" />
+      <workItem from="1601419664917" duration="12211000" />
     </task>
     <servers />
   </component>

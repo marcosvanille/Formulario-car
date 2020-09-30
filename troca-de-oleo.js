@@ -29,11 +29,13 @@ function cadastrar() {
 
 function tipoCar() {
     $.ajax({
-        url: "http://localhost/projetos/Formulario-car/tipos-carros.php/tipo=",
+        url: "http://localhost/projetos/Formulario-car/tipo-carros.php/?tipo=" + tipo.value,
         type: 'GET',
         success: function (data) {
             tipos = data
-            createTipos(tipos);
+            limpaResetCarros();
+            createCarros(tipos);
+
         },
         error: function (data) {
             alert('Erro ao chamar requisiçao')
@@ -41,81 +43,6 @@ function tipoCar() {
 
     });
 
-    if (tipo.value == 'comum') { //A comum
-        preco.value = "20 a 30 mil"; // 20 a 30 mil
-        preco.readOnly = true
-
-        limpaResetCarros()
-
-        var comum0 = document.createElement("option");
-        comum0.value = "up";
-        comum0.text = "UP";
-        carros.add(comum0, carros.options[0]);
-
-        var comum1 = document.createElement("option");
-        comum1.value = "palio";
-        comum1.text = "Palio";
-        carros.add(comum1, carros.options[0]);
-
-        var comum2 = document.createElement("option");
-        comum2.value = "uno";
-        comum2.text = "Uno";
-        carros.add(comum2, carros.options[0]);
-
-        var comum3 = document.createElement("option");
-        comum3.value = "gol";
-        comum3.text = "Gol";
-        carros.add(comum3, carros.options[0]);
-
-        return
-    }
-
-    if (tipo.value == 'confortavel') { //B confortavel
-        preco.value = "50 a 100 mil" // 50 a 100 mil
-        preco.readOnly = true
-
-        limpaResetCarros()
-
-        var confortavel0 = document.createElement("option");
-        confortavel0.value = "bmw";
-        confortavel0.text = "Bmw";
-        carros.add(confortavel0, carros.options[0]);
-
-        var confortavel01 = document.createElement("option");
-        confortavel01.value = "mercedes";
-        confortavel01.text = "Mercedes";
-        carros.add(confortavel01, carros.options[0]);
-
-        var confortavel02 = document.createElement("option");
-        confortavel02.value = "fusion";
-        confortavel02.text = "Fusion";
-        carros.add(confortavel02, carros.options[0]);
-
-    }
-    if (tipo.value == 'esportivo') { //C  esportivo
-        preco.value = '200 a 500 mil '  // 200 a 500 mil
-        preco.readOnly = true
-
-        limpaResetCarros()
-
-        var esportivo0 = document.createElement("option");
-        esportivo0.value = "ferrari";
-        esportivo0.text = "Ferrari";
-        carros.add(esportivo0, carros.options[0]);
-
-
-        var esportivo01 = document.createElement("option");
-        esportivo01.value = "bugati";
-        esportivo01.text = "Bugati";
-        carros.add(esportivo01, carros.options[0]);
-
-        var esportivo02 = document.createElement("option");
-        esportivo02.value = "lamborghini";
-        esportivo02.text = "Lamborghini";
-        carros.add(esportivo02, carros.options[0]);
-
-
-    }
 }
 
 function limpaResetCarros() {
@@ -133,6 +60,7 @@ function validarEmail() {
 
     if (!email.checkValidity()) {
         error.innerHTML = "Email invalido";
+        error - email
     }
 
 }
@@ -181,12 +109,25 @@ function createTipos(tipos) {
         optionElement.text = element.tipo;
         tipo.add(optionElement, tipo.options[0]);
 
-        console.log(element);
+
+    })
+}
+
+function createCarros(carro) {
+    carro.forEach(function (element, index, array) {
+
+        var optionElement = document.createElement("option");
+        optionElement.value = element.nome;
+        optionElement.text = element.nome;
+        carros.add(optionElement, carros.options[0]);
+
+
     })
 }
 
 var tipos = [];
 
+//preenche as informaçoes do select de tipo
 $.ajax({
     url: "http://localhost/projetos/Formulario-car/carro.php",
     type: 'GET',
