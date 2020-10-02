@@ -1,5 +1,5 @@
 var tipo = document.getElementById('inputTipo')
-var preco = document.getElementById('inputPreco')
+var precoValor = document.getElementById('inputPreco')
 var carros = document.getElementById('inputCarro')
 var nome = document.getElementById('inputNome')
 var telefone = document.getElementById('inputFone')
@@ -7,6 +7,7 @@ var email = document.querySelector('#email');
 var error = document.querySelector('#error-email');
 
 function cadastrar() {
+
 
     if (nome.value == "") {
         alert('Preencha  o campo nome!')
@@ -24,6 +25,20 @@ function cadastrar() {
 
     alert('Cadastrado com sucesso!!')
 
+    $.ajax({
+        url: "http://localhost/projetos/Formulario-car/adiciona-dados.php",
+        type: 'POST',
+        data: $('#formulario').serialize(),
+        success: function (data) {
+            alert('Cadastrado com sucesso!')
+            console.log(data);
+        },
+        error: function (data) {
+            alert('Erro ao chamar requisiçao')
+        }
+
+    });
+
     return;
 }
 
@@ -35,6 +50,7 @@ function tipoCar() {
             tipos = data
             limpaResetCarros();
             createCarros(tipos);
+            getPreco(tipo.value);
 
         },
         error: function (data) {
@@ -125,6 +141,19 @@ function createCarros(carro) {
     })
 }
 
+function getPreco(preco) {
+    console.log(preco);
+    tipos.forEach(function (element, index, array) {
+        if (preco == element.tipo) {
+            valorTipo = element.preco;
+            precoValor.value =  element.preco
+        }
+
+    })
+
+}
+
+var valorTipo = "";
 var tipos = [];
 
 //preenche as informaçoes do select de tipo
